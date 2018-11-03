@@ -4,3 +4,13 @@ spring:
     username: root
     password: mi-contraseña
     driver-class-name: com.mysql.jdbc.Driver
+  jpa:
+    database-platform: org.hibernate.dialect.MySQL5Dialect
+    database: mysql
+    hibernate:
+      ddl-auto: create-drop
+logging:
+  level:
+    org:
+      hibernate:
+        SQL: debug

@@ -19,7 +19,7 @@ import java.util.Map;
 public class CredentialsController {
 
     @GetMapping
-    public Map<String, Object> getUser(Authentication authentication) {
+    public Map<String, Object> getCustomUser(Authentication authentication) {
         Map<String, Object> user = new HashMap<>();
         user.put("username", authentication.getName());
         user.put("roles", authentication.getAuthorities());
@@ -37,12 +37,12 @@ public class CredentialsController {
     }
 
     @GetMapping("/context/authentication")
-    public Authentication getAuthenticationByContextHolder() {
+    public Authentication getAuthenticationSecurityByContextHolder() {
         return SecurityContextHolder.getContext().getAuthentication();
     }
 
-    @GetMapping("/context/principal")
-    public User getPrincipalByContextHolder() {
+    @GetMapping("/context/user-details")
+    public User getUserDetailsBySecurityContextHolder() {
         Object principal = SecurityContextHolder.getContext().getAuthentication().getPrincipal();
         return (User) principal;
     }
