@@ -144,11 +144,13 @@ logging:
 ---
 ## Testing
 
-#### Credentials
-user1 = username: user, password: 12345
-user2 = username: admin, password: 12345
+#### 1. Credentials
+1. user = username: user, password: 12345
+2. admin = username: admin, password: 12345
 
-#### Populate with data for testing on resources/import.sql
+#### 2. Using mysql on this example
+
+#### 3. Populate with data for testing on resources/import.sql
 ````sql
 INSERT INTO users (username, password, enabled) VALUES ('user', '$2a$10$UjkBbFTTLtrVrPWKm4AmjufiyGGGprc04nxghBeWmWyP1o25lA.ka', 1);
 INSERT INTO users (username, password, enabled) VALUES ('admin', '$2a$10$U.kxzZsFe3.1Uw3qgVicXek9X8HeyRbVGMRsG3VeuoGWRXyV2zHF2', 1);
