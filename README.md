@@ -141,8 +141,12 @@ logging:
       hibernate:
         SQL: debug
 ````
+---
+## Testing
 
------
+#### Credentials
+user1 = username: user, password: 12345
+user2 = username: admin, password: 12345
 
 #### Populate with data for testing on resources/import.sql
 ````sql
